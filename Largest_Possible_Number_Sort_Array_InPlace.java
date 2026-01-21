@@ -1,5 +1,5 @@
 import java.util.*;
-class Main {
+class Largest_Possible_Number_Sort_Array_InPlace {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
