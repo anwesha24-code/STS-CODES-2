@@ -17,7 +17,7 @@
 | Sort Bitonic Doubly Linked List | O(N) | O(1) | Sorts a DLL that first increases then decreases |
 | Maximum Sliding Window (Brute Force) | O(N × K) | O(N-K+1) | Finds max of each window by scanning all elements |
 | Sort Bitonic Doubly Linked List | O(N log N) | O(N) (if iterative approach for reversing is used O(1)) | Sorts a DLL that first increases then decreases |
-| Maximum Sliding Window (Brute Force) | O(N × K) | O(1) | Finds max of each window by scanning all elements |
+| Maximum Sliding Window (Brute Force) | O(N × K) | O(N-K+1) | Finds max of each window by scanning all elements |
 | Maximum Sliding Window (Self-balancing Tree) | O(N log K) | O(K) | Maintains window elements in balanced BST |
 | Maximum Sliding Window (Max Heap) | O(N log K) | O(K) | Uses heap to track maximum in each window |
 | Maximum Sliding Window (Deque) | O(N) | O(K) | Uses deque to maintain decreasing order of elements |
