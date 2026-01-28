@@ -8,6 +8,8 @@ class Node {
     }
 }
 class Main {
+
+//function to be written----------------
     public static void sort(Node head){
         Node temp=head;int len=0;
         while(temp.next!=null){
@@ -26,6 +28,7 @@ class Main {
             i++;temp=temp.next;
         }
     }
+//------------------------------------
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
