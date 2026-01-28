@@ -1,4 +1,7 @@
+//the sort function works for sorting of doubly linked list as well
+
 import java.util.*;
+
 class Node {
     int val;
     Node next;
@@ -7,36 +10,45 @@ class Node {
         this.next = null;
     }
 }
+
 class Main {
 
-//function to be written----------------
-    public static void sort(Node head){
-        Node temp=head;int len=0;
-        while(temp.next!=null){
-            len++;temp=temp.next;
+//function to be written------------------------
+    public static void sort(Node head) {
+        Node temp = head;
+        int len = 0;
+        while (temp != null) {
+            len++;
+            temp = temp.next;
         }
-        int []arr=new int[len];
-        temp=head;int i=0;
-        while(temp.next!=null){
-            arr[i]=temp.val;
-            i++;temp=temp.next;
+        int[] arr = new int[len];
+        temp = head;
+        int i = 0;
+        while (temp != null) {
+            arr[i++] = temp.val;
+            temp = temp.next;
         }
+
         Arrays.sort(arr);
-        temp=head;i=0;
-        while(temp.next!=null){
-            temp.val=arr[i];
-            i++;temp=temp.next;
+
+        temp = head;
+        i = 0;
+        while (temp != null) {
+            temp.val = arr[i++];
+            temp = temp.next;
         }
     }
-//------------------------------------
+//-----------------------------------------------
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        Node head = null;
-        Node temp = null;
+
+        Node head = null, temp = null;
+
         for (int i = 0; i < n; i++) {
             int value = sc.nextInt();
             Node newNode = new Node(value);
+
             if (head == null) {
                 head = newNode;
                 temp = head;
@@ -46,11 +58,10 @@ class Main {
             }
         }
         sort(head);
-        Node trav=head;
-        while(trav!=null){
+        Node trav = head;
+        while (trav != null) {
             System.out.println(trav.val);
-            trav=trav.next;
+            trav = trav.next;
         }
-        
     }
 }
