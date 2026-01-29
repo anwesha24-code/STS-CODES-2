@@ -1,0 +1,27 @@
+Node temp=head;int len=0;
+while(temp!=null){
+    temp=temp.next;
+    len++;
+}
+temp=head;
+HashMap<Integer,Integer>hmp=new HashMap<>();
+while(temp!=null){
+    hmp.put(temp.val,hmp.getOrDefault(temp.val,0)+1);
+    temp=temp.next;
+}
+int [][]arr=new int[hmp.size()][2];int i=0;
+for(Map.Entry<Integer,Integer>ent:hmp.entrySet()){
+    arr[i][0]=ent.getKey();
+    arr[i][1]=ent.getValue();
+    i++;
+}
+Arrays.sort(arr,(a,b)->b[1]-a[1]);
+temp=head;
+i=0;
+while(temp!=null && i<arr.length){
+    for(int j=0;j<arr[i][1];j++){
+        temp.val=arr[i][0];
+        temp=temp.next;
+    }
+    i++;
+}
