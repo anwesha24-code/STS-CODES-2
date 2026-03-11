@@ -1,30 +1,24 @@
-import java.util.Stack;
+import java.util.Scanner;
 
-class MinStack {
-    Stack<Integer> stack = new Stack<>();
-    Stack<Integer> minStack = new Stack<>();
+public class MinimumStack {
+     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] stack = new int[100];
+        int top = -1;
 
-    void push(int x) {
-        stack.push(x);
-        if (minStack.isEmpty() || x <= minStack.peek()) {
-            minStack.push(x);
+        int n = sc.nextInt();
+        // PUSH using loop
+        for (int i = 0; i < n; i++) {
+            stack[++top] = sc.nextInt();
         }
-    }
 
-    void pop() {
-        if (stack.isEmpty()) return;
-
-        int removed = stack.pop();
-        if (removed == minStack.peek()) {
-            minStack.pop();
+        // FIND MIN using loop
+        int min = stack[0];
+        for (int i = 1; i <= top; i++) {
+            if (stack[i] < min) {
+                min = stack[i];
+            }
         }
-    }
-
-    int top() {
-        return stack.peek();
-    }
-
-    int getMin() {
-        return minStack.peek();
+        System.out.println("Minimum element = " + min);
     }
 }
