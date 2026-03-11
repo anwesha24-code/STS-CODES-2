@@ -5,19 +5,20 @@ public class Stock_Span_Problem {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        int[] price = new int[n];
+        int[] arr = new int[n];
         for (int i = 0; i < n; i++)
-            price[i] = sc.nextInt();
+            arr[i] = sc.nextInt();
 
-        int[] span = new int[n];
+        int[] ans = new int[n];
 
-        for (int i = 0; i < n; i++) {
-            span[i] = 1;
-            for (int j = i - 1; j >= 0 && price[j] <= price[i]; j--)
-                span[i]++;
+       for(int i=0;i<n;i++){
+            int ctr=1;
+            for(int j=i-1;j>=0 && price[j]<=price[i];j--){
+                  ctr++;
+            }
+           ans[i]=ctr;
         }
-
-        for (int x : span)
+        for (int x : ans)
             System.out.print(x + " ");
     }
 
