@@ -232,8 +232,9 @@
 | **Kahn’s Algo** | Topo Sort | O(V + E) | O(V + E) |
 | **Bellman-Ford** | Shortest Path | O(V × E) | O(V + E) |
 | **Dijkstra** | (Matrix) | O(V²) | O(V²) |
-| | Morris(Priority Queue) | O(E + V log V) | O(V + E) |
+| | Dial(Priority Queue) | O(E + V log V) | O(V + E) |
 | **BFS** | Traversal | O(V + E) | O(V) |
 | **DFS** | Traversal | O(V + E) | O(V) |
 | **Boundary Traversal** | Tree traversal | O(n) | O(h) |
 | **Vertical Order Traversal** | Tree traversal | O(n log n) | O(n) |
+| **Winner Tree** | Tree traversal | O(n log k) | O(k+n) |
