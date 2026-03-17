@@ -1,3 +1,4 @@
+package fat;
 import java.util.*;
 
 public class distribution {

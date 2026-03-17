@@ -1,3 +1,4 @@
+package cat1;
 //time complexity: O(n*k)
 //space complexity: O(n-k+1)
 import java.util.*;

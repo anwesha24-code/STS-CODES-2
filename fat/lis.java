@@ -1,3 +1,4 @@
+package fat;
 import java.util.*;
 public class lis {
     public static void main(String []args){

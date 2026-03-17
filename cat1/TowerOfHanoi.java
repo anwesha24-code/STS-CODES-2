@@ -1,3 +1,4 @@
+package cat1;
 import java.util.*;
 public class TowerOfHanoi {
     public static void main(String[] args) {

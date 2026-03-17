@@ -1,3 +1,4 @@
+package cat1;
 import java.util.Scanner;
 
 public class Stock_Span_Problem {

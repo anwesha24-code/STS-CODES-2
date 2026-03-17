@@ -211,3 +211,29 @@
 - Dijkstra → Faster, no negative edges
 - BFS/DFS → O(V + E)
 - Tree traversals → Mostly O(n)
+
+
+# 📊 Time & Space Complexity Table
+
+| Topic / Algorithm | Operation | Time Complexity | Space Complexity |
+|------------------|----------|----------------|------------------|
+| **Recover BST (Inorder)** | Traverse + fix | O(n) | O(n) worst, O(log n) balanced |
+| **Recover BST (Morris)** | Traverse + fix | O(n) | O(1) |
+| **K-ary Heap** | Insert | O(logₖ n) | O(n) |
+| | Extract Min/Max | O(k logₖ n) | O(n) |
+| | Build Heap | O(n) | O(n) |
+| **Binomial Heap** | Insert | O(log n) | O(n) |
+| | Find Min | O(log n) *(O(1) with pointer)* | O(n) |
+| | Extract Min | O(log n) | O(n) |
+| | Merge | O(log n) | O(n) |
+| | Decrease Key | O(log n) | O(n) |
+| **Heap Sort** | Build Heap | O(n) | O(1) |
+| | Sort (overall) | O(n log n) | O(1) |
+| **Kahn’s Algo** | Topo Sort | O(V + E) | O(V + E) |
+| **Bellman-Ford** | Shortest Path | O(V × E) | O(V + E) |
+| **Dijkstra** | (Matrix) | O(V²) | O(V²) |
+| | (Priority Queue) | O(E + V log V) | O(V + E) |
+| **BFS** | Traversal | O(V + E) | O(V) |
+| **DFS** | Traversal | O(V + E) | O(V) |
+| **Boundary Traversal** | Tree traversal | O(n) | O(h) |
+| **Vertical Order Traversal** | Tree traversal | O(n log n) | O(n) |
