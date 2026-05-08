@@ -1,3 +1,26 @@
+//method-1
+
+//recover bst trick method
+//input array containing tree values
+//output array containing recovered values
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        String []arr=s.split(" ");
+        int []ans=new int[arr.length];
+        for(int i=0;i<arr.length;i++)ans[i]=Integer.parseInt(arr[i]);
+        Arrays.sort(ans);
+        for(int a:ans)System.out.println(a);
+    }
+}
+
+//-----------------------------------------------------------
+
+//method-2
+
 //format followed
 //get String input and build tree
 //traverse inorder(any traversal can be followed) and store in list

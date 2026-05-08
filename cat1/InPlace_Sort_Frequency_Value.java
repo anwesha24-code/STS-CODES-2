@@ -7,12 +7,10 @@ class InPlace_Sort_Frequency_Value {
         int n = sc.nextInt();
 
         Integer[] arr = new Integer[n];
-        for (int i = 0; i < n; i++)
-            arr[i] = sc.nextInt();
+        for (int i = 0; i < n; i++)arr[i] = sc.nextInt();
 
         HashMap<Integer, Integer> freq = new HashMap<>();
-        for (int x : arr)
-            freq.put(x, freq.getOrDefault(x, 0) + 1);
+        for (int x : arr)freq.put(x, freq.getOrDefault(x, 0) + 1);
 
         Arrays.sort(arr, (a, b) -> {
             if (!freq.get(a).equals(freq.get(b)))

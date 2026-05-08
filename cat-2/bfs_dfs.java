@@ -1,3 +1,46 @@
+//method-1
+//without constructing adjacency list
+static void bfs(int n, int[][] edges, int start) {
+    boolean[] visited = new boolean[n + 1];
+    Queue<Integer> q = new LinkedList<>();
+
+    q.add(start);
+    visited[start] = true;
+
+    while (!q.isEmpty()) {
+        int node = q.poll();
+        System.out.print(node + " ");
+        for (int[] e : edges) {
+            int u = e[0], v = e[1];
+
+            if (u == node && !visited[v]) {
+                visited[v] = true;
+                q.add(v);
+            } else if (v == node && !visited[u]) {
+                visited[u] = true;
+                q.add(u);
+            }
+        }
+    }
+}
+static void dfs(int node, int[][] edges, boolean[] visited) {
+    visited[node] = true;
+    System.out.print(node + " ");
+
+    for (int[] e : edges) {
+        int u = e[0], v = e[1];
+
+        if (u == node && !visited[v]) {
+            dfs(v, edges, visited);
+        } else if (v == node && !visited[u]) {
+            dfs(u, edges, visited);
+        }
+    }
+}
+
+//------------------------------------------------------------------------
+
+//method-2
 import java.util.*;
 
 public class bfs_dfs {

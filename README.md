@@ -210,6 +210,8 @@
 - Bellman-Ford → Handles negative edges
 - Dijkstra → Faster, no negative edges
 - BFS/DFS → O(V + E)
+- Winner Tree → finds minimum element
+- Loser Tree → finds maximum element
 - Tree traversals → Mostly O(n)
 
 
